@@ -1,0 +1,251 @@
+maris@MARIS:~/kafka_ml_project$ cat producer.py
+import requests
+from kafka import KafkaProducer
+import json
+import time
+
+BROKER = "localhost:9092"
+TOPIC = "animal_events"
+API_KEY = "alABl6pnjzrM6e9do19xpz1CBWRpHUVsLGsBmdp7"
+BASE_URL = "https://api.fda.gov/animalandveterinary/event.json"
+
+producer = KafkaProducer(
+    bootstrap_servers=[BROKER],
+    value_serializer=lambda v: json.dumps(v).encode("utf-8")
+)
+
+def fetch_fda_data():
+    """Fetch data from OpenFDA API"""
+    url = f"{BASE_URL}?search=primary_reporter:Veterinarian&limit=50&api_key={API_KEY}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        print(data)
+        results = data.get("results", [])
+        return results
+    else:
+        print(f"❌ API Error: {response.status_code}")
+        return []
+
+print("🚀 Streaming OpenFDA animal events into Kafka...")
+
+while True:
+    events = fetch_fda_data()
+    for event in events:
+        producer.send(TOPIC, value=event)
+        print(f"Produced event -> ID: {event.get('report_id', 'N/A')}")
+    time.sleep(5)  # fetch every 10 sec
+maris@MARIS:~/kafka_ml_project$(venv) maris@MARIS:~/kafka_ml_project$ cat consumer.py
+import json
+import threading
+import pandas as pd
+import joblib
+from kafka import KafkaConsumer
+from kafka.errors import NoBrokersAvailable
+import streamlit as st
+import plotly.express as px
+import time
+from queue import Queue
+
+# --- 1. Page Configuration ---
+st.set_page_config(page_title="Animal Disease Outbreak Dashboard", layout="wide")
+st.title("🐾 Real-Time Animal Disease Severity Dashboard")
+st.markdown("Use the filters in the sidebar to analyze data by state and species.")
+
+# --- 2. Load the ML Model and Encoders ---
+@st.cache_resource
+def load_resources():
+    try:
+        model = joblib.load("severity_model.pkl")
+        feature_encoders = joblib.load("severity_feature_encoders.pkl")
+        target_encoder = joblib.load("severity_target_encoder.pkl")
+        return model, feature_encoders, target_encoder
+    except FileNotFoundError:
+        st.sidebar.error("ERROR: Model/encoder files not found.")
+        st.sidebar.info("Please run the `train_severity_model.py` script first to generate the necessary .pkl files.")
+        return None, None, None
+
+model, feature_encoders, target_encoder = load_resources()
+
+if not all([model, feature_encoders, target_encoder]):
+    st.stop()
+else:
+    st.sidebar.success("Severity model and encoders loaded successfully.")
+
+# --- 3. Kafka Consumer Setup ---
+@st.cache_resource
+def get_kafka_consumer():
+    try:
+        consumer = KafkaConsumer(
+            'animal_events',
+            bootstrap_servers='localhost:9092',
+            auto_offset_reset='earliest',
+            value_deserializer=lambda v: json.loads(v.decode('utf-8', 'ignore')),
+            consumer_timeout_ms=1000
+        )
+        st.sidebar.info("Successfully connected to Kafka.")
+        return consumer
+    except NoBrokersAvailable:
+        st.sidebar.error("Kafka Connection Error: Could not connect to the broker at 'localhost:9092'.")
+        return None
+
+consumer = get_kafka_consumer()
+if not consumer:
+    st.stop()
+
+# --- 4. Prediction Function ---
+def predict_severity(event):
+    """Processes a Kafka message and predicts the outbreak severity."""
+    try:
+        species = event.get("animal", {}).get("species", "Unknown")
+        location = event.get("receiver", {}).get("state", "Unknown")
+        symptoms = ", ".join(sorted([r.get("veddra_term_name", "Unknown") for r in event.get("reaction", [])]))
+        outcome = event.get("outcome", [{}])[0].get("medical_status", "Unknown")
+
+        # Placeholder fields
+        disease = "Not specified"
+        temperature = 39.0  # average animal temperature
+
+        data_for_prediction = {
+            "species": [species], "location": [location], "symptoms": [symptoms],
+            "disease": [disease], "temperature": [temperature], "outcome": [outcome]
+        }
+        df = pd.DataFrame(data_for_prediction)
+
+        # Encode categorical features
+        for col, encoder in feature_encoders.items():
+            if col in df.columns:
+                df[col] = df[col].astype(str)
+                df[col] = df[col].apply(lambda s: encoder.transform([s])[0] if s in encoder.classes_ else -1)
+
+        expected_model_features = ['species', 'location', 'symptoms', 'disease', 'temperature', 'outcome']
+        df = df.reindex(columns=expected_model_features, fill_value=-1)
+
+        prediction_code = model.predict(df)[0]
+        severity_level = target_encoder.inverse_transform([prediction_code])[0]
+
+        return [species, location, symptoms, outcome, severity_level]
+    except Exception as e:
+        print(f"Error during prediction: {e}")
+        return ["Error", "Error", "Error", "Error", "Error"]
+
+# --- 5. Initialize Session State and Data Queue ---
+if 'data_df' not in st.session_state:
+    st.session_state.data_df = pd.DataFrame(columns=["Species", "Location", "Symptoms", "Outcome", "Severity"])
+if 'consumer_thread_started' not in st.session_state:
+    st.session_state.consumer_thread_started = False
+if 'data_queue' not in st.session_state:
+    st.session_state.data_queue = Queue()
+
+# --- 6. Background Thread for Kafka Consumer ---
+def consume_kafka(q):
+    """Continuously consumes messages from Kafka and puts results in a queue."""
+    while True:
+        try:
+            # Poll messages in a safe, non-blocking way
+            raw_msgs = consumer.poll(timeout_ms=1000)
+            for _, messages in raw_msgs.items():
+                for msg in messages:
+                    prediction_result = predict_severity(msg.value)
+                    q.put(prediction_result)
+            time.sleep(1)  # small sleep to avoid busy-wait
+        except Exception as e:
+            print(f"CRITICAL ERROR IN CONSUMER THREAD: {e}")
+            time.sleep(5)
+
+if not st.session_state.consumer_thread_started:
+    threading.Thread(target=consume_kafka, args=(st.session_state.data_queue,), daemon=True).start()
+    st.session_state.consumer_thread_started = True
+
+# --- 7. Dashboard Rendering Logic ---
+
+# Get all new data from the queue and append it to the main DataFrame
+new_data_list = []
+while not st.session_state.data_queue.empty():
+    new_data_list.append(st.session_state.data_queue.get())
+
+if new_data_list:
+    new_df = pd.DataFrame(new_data_list, columns=["Species", "Location", "Symptoms", "Outcome", "Severity"])
+    st.session_state.data_df = pd.concat([st.session_state.data_df, new_df], ignore_index=True)
+
+df = st.session_state.data_df
+
+# --- Sidebar Filters ---
+st.sidebar.header("Dashboard Filters")
+if not df.empty:
+    sorted_states = sorted(df['Location'].unique())
+    selected_states = st.sidebar.multiselect("Select State(s)", options=sorted_states, default=[])
+
+    sorted_species = sorted(df['Species'].unique())
+    selected_species = st.sidebar.multiselect("Select Species", options=sorted_species, default=[])
+
+    if selected_states:
+        df = df[df['Location'].isin(selected_states)]
+    if selected_species:
+        df = df[df['Species'].isin(selected_species)]
+else:
+    st.sidebar.info("Filters will appear once data is received.")
+
+# --- Main Dashboard Display ---
+if df.empty:
+    st.info("🔄 Waiting for data from Kafka stream... Please ensure your producer is running.")
+else:
+    # --- KPIs ---
+    st.subheader("Filtered Statistics")
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Total Events", f"{len(df)}")
+    col2.metric("🔴 Severe Cases", f"{df[df['Severity'] == 'severe'].shape[0]}")
+    col3.metric("🟠 Moderate Cases", f"{df[df['Severity'] == 'moderate'].shape[0]}")
+    col4.metric("🟡 Mild Cases", f"{df[df['Severity'] == 'mild'].shape[0]}")
+
+    # --- Charts ---
+    st.subheader("Visualizations")
+    c1, c2 = st.columns(2)
+
+    with c1:
+        # Pie chart for Severity Distribution
+        severity_counts = df['Severity'].value_counts().reset_index()
+        severity_counts.columns = ['Severity', 'count']
+        fig_sev = px.pie(
+            severity_counts, values='count', names='Severity',
+            title="<b>Severity Distribution</b>",
+            color='Severity',
+            color_discrete_map={'severe': '#e74c3c', 'moderate': '#f39c12', 'mild': '#f1c40f', 'no outbreak': '#2ecc71'}
+        )
+        st.plotly_chart(fig_sev, use_container_width=True)
+
+        # Bar chart for Severity by Species
+        sev_by_species = df.groupby('Species')['Severity'].value_counts().unstack().fillna(0).reset_index()
+        sev_by_species = pd.melt(sev_by_species, id_vars='Species', var_name='Severity', value_name='Count')
+        fig_species = px.bar(
+            sev_by_species, x='Species', y='Count', color='Severity',
+            title="<b>Severity Count by Species</b>",
+            color_discrete_map={'severe': '#e74c3c', 'moderate': '#f39c12', 'mild': '#f1c40f', 'no outbreak': '#2ecc71'}
+        )
+        st.plotly_chart(fig_species, use_container_width=True)
+
+    with c2:
+        # Pie chart for Outcome Distribution
+        outcome_counts = df['Outcome'].value_counts().reset_index()
+        outcome_counts.columns = ['Outcome', 'count']
+        fig_out = px.pie(outcome_counts, values='count', names='Outcome', title="<b>Case Outcome Distribution</b>")
+        st.plotly_chart(fig_out, use_container_width=True)
+
+        # Bar chart for Severity by Location
+        sev_by_loc = df.groupby('Location')['Severity'].value_counts().unstack().fillna(0).reset_index()
+        sev_by_loc = pd.melt(sev_by_loc, id_vars='Location', var_name='Severity', value_name='Count')
+        fig_loc = px.bar(
+            sev_by_loc, x='Location', y='Count', color='Severity',
+            title="<b>Severity Count by Location</b>",
+            color_discrete_map={'severe': '#e74c3c', 'moderate': '#f39c12', 'mild': '#f1c40f', 'no outbreak': '#2ecc71'}
+        )
+        st.plotly_chart(fig_loc, use_container_width=True)
+
+    # --- Real-Time Event Log ---
+    st.subheader("Real-Time Event Log (Filtered)")
+    st.dataframe(df.tail(20))
+
+# --- Auto-Refreshing ---
+time.sleep(2)
+st.rerun()
+(venv) maris@MARIS:~/kafka_ml_project$

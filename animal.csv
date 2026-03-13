@@ -1,0 +1,467 @@
+species,symptoms,disease,temperature,outcome,severity
+Dog,"Vomiting, Diarrhea",Gastroenteritis,39.8,Recovered,mild
+Cow,"Lethargy, Loss of appetite",Anaplasmosis,40.7,Ongoing,moderate
+Cat,None,Routine Check-up,38.6,Recovered,no outbreak
+Horse,Coughing,Equine Influenza,40.1,Ongoing,moderate
+Dog,"Seizure, Foaming at mouth",Rabies,42.8,Died,severe
+Pig,"Fever, Skin lesions",Swine Erysipelas,41.5,Died,severe
+Sheep,"Limping, Fever",Foot Rot,40.3,Ongoing,moderate
+Dog,"Itching, Scratching",Flea Allergy,39.1,Recovered,mild
+Cat,"Sneezing, Watery eyes",Feline Herpesvirus,39.6,Recovered,mild
+Cow,"Stumbling, Aggression",BSE (Mad Cow Disease),41.9,Euthanized,severe
+Dog,Lethargy,Heartworm Disease,39.4,Ongoing,moderate
+Horse,"Coughing, Nasal discharge",Strangles,40.8,Ongoing,severe
+Goat,Diarrhea,Coccidiosis,39.9,Recovered,mild
+Dog,"Difficulty breathing, Coughing",Kennel Cough,40.2,Recovered,moderate
+Cat,"Increased thirst, Weight loss",Diabetes,38.9,Ongoing,moderate
+Sheep,None,Vaccination Visit,38.8,Recovered,no outbreak
+Dog,"Vomiting, Lethargy, Jaundice",Leptospirosis,41.2,Died,severe
+Pig,"Fever, Lethargy",Porcine Reproductive and Respiratory Syndrome,41.6,Died,severe
+Cow,"Lameness, Blisters on mouth",Foot-and-Mouth Disease,41.1,Euthanized,severe
+Cat,Vomiting,Hairball,38.7,Recovered,mild
+Dog,"Diarrhea, Vomiting, Lethargy",Parvovirus,41.4,Died,severe
+Horse,"Laminitis, Fever",Potomac Horse Fever,40.9,Ongoing,severe
+Dog,"Joint pain, Lethargy",Lyme Disease,40,Recovered,moderate
+Cat,None,Annual Wellness Exam,38.5,Recovered,no outbreak
+Cow,"Reduced milk production, Fever",Mastitis,40.6,Ongoing,moderate
+Pig,"Vomiting, Diarrhea",Transmissible Gastroenteritis,40.5,Died,moderate
+Goat,Coughing,Pneumonia,40.4,Recovered,moderate
+Dog,"Hair loss, Skin sores",Mange,39.2,Recovered,mild
+Cat,"Lethargy, Pale gums",Feline Leukemia Virus,39.7,Ongoing,moderate
+Sheep,"Weight loss, Anemia",Haemonchosis,39.5,Ongoing,moderate
+Dog,"Difficulty urinating, Blood in urine",Urinary Tract Infection,39.3,Recovered,mild
+Horse,None,Dental Check-up,38.4,Recovered,no outbreak
+Cow,"Fever, Nasal discharge",Bovine Respiratory Disease,41,Ongoing,severe
+Dog,"Vomiting, Abdominal pain",Pancreatitis,40.5,Ongoing,moderate
+Cat,"Lethargy, Loss of appetite",Feline Immunodeficiency Virus,39.5,Ongoing,moderate
+Pig,"Sudden death, High fever",African Swine Fever,42.5,Died,severe
+Dog,"Coughing, Reluctance to exercise",Canine Influenza,40.3,Recovered,moderate
+Cat,"Hiding, Urinating outside litter box",Feline Lower Urinary Tract Disease,38.9,Recovered,mild
+Horse,"Muscle stiffness, Spasms",Tetanus,41.3,Died,severe
+Dog,None,Routine Vaccination,38.6,Recovered,no outbreak
+Cow,"Abortion, Fever",Brucellosis,40.8,Euthanized,severe
+Dog,"Seizures, Circling",Canine Distemper,41.7,Died,severe
+Cat,"Yellow gums, Lethargy",Hepatic Lipidosis,39.8,Ongoing,moderate
+Sheep,Coughing,Ovine Progressive Pneumonia,40.1,Ongoing,moderate
+Pig,None,Health Certificate,38.7,Recovered,no outbreak
+Dog,"Lethargy, Swollen lymph nodes",Ehrlichiosis,40.4,Recovered,moderate
+Cat,"Vomiting, Diarrhea",Food Poisoning,39.9,Recovered,mild
+Horse,"Nasal discharge, Swollen lymph nodes",Glanders,41.2,Euthanized,severe
+Dog,"Weight gain, Hair loss",Hypothyroidism,38.8,Ongoing,moderate
+Cow,"Drooling, Inability to swallow",Rabies,42.2,Euthanized,severe
+Cat,None,Nail Trim,38.5,Recovered,no outbreak
+Dog,"Excessive thirst, Frequent urination",Cushing's Disease,39,Ongoing,moderate
+Pig,"Tremors, Incoordination",Pseudorabies,41.8,Died,severe
+Goat,"Skin lesions, Hair loss",Ringworm,39.2,Recovered,mild
+Horse,"Fever, Anemia, Jaundice",Equine Infectious Anemia,41,Euthanized,severe
+Dog,"Reverse sneezing, Nasal discharge",Nasal Mites,38.9,Recovered,mild
+Cat,None,Microchip Placement,38.7,Recovered,no outbreak
+Cow,"Sudden death, High fever, Swelling",Anthrax,42.6,Died,severe
+Dog,"Honking cough, Gagging",Tracheobronchitis,39.6,Recovered,mild
+Sheep,"Nasal discharge, Coughing",Pneumonia,40.5,Ongoing,moderate
+Cat,"Rapid breathing, Lethargy",Heartworm Disease,40,Ongoing,severe
+Pig,"Lameness, Fever",Porcine Arthritis,40.2,Ongoing,moderate
+Dog,None,Behavioral Consultation,38.8,Recovered,no outbreak
+Horse,"Diarrhea, Colic",Salmonellosis,40.7,Ongoing,moderate
+Cow,"Weight loss, Chronic diarrhea",Johne's Disease,39.7,Euthanized,severe
+Dog,"Red eyes, Discharge",Conjunctivitis,39,Recovered,mild
+Cat,"Bald patches, Itching",Mange,39.3,Recovered,mild
+Goat,None,Deworming,38.9,Recovered,no outbreak
+Dog,"Head shaking, Ear scratching",Ear Infection,39.1,Recovered,mild
+Sheep,"Oral blisters, Lameness",Contagious Ecthyma,39.8,Recovered,moderate
+Horse,"Weight loss, Diarrhea",Equine Gastric Ulcer Syndrome,39.5,Ongoing,moderate
+Cat,Vomiting,Ingested Foreign Body,39.4,Ongoing,moderate
+Cow,None,Breeding Soundness Exam,38.7,Recovered,no outbreak
+Dog,"Limping, Swollen joints",Arthritis,38.9,Ongoing,mild
+Pig,"Fever, Vomiting, Purple skin",Classical Swine Fever,42.1,Died,severe
+Cat,Diarrhea,Giardia,39.2,Recovered,mild
+Dog,"Licking paws, Redness",Yeast Infection,38.8,Recovered,mild
+Horse,None,Hoof Trimming,38.5,Recovered,no outbreak
+Cow,"Circling, Facial paralysis",Listeriosis,41.1,Died,severe
+Dog,"Bad breath, Yellow teeth",Dental Disease,38.7,Ongoing,mild
+Cat,"Straining to defecate, Hard stools",Constipation,38.6,Recovered,mild
+Goat,"Swollen joints, Lameness",Caprine Arthritis Encephalitis,40.3,Ongoing,moderate
+Pig,None,Tusk Trim,38.8,Recovered,no outbreak
+Dog,"Runny nose, Sneezing",Canine Adenovirus,39.7,Recovered,mild
+Horse,"Skin lumps, Ulcerations",Pigeon Fever,40,Ongoing,moderate
+Cat,None,Flea Treatment,38.9,Recovered,no outbreak
+Dog,"Blue tint to cornea, Eye pain",Infectious Canine Hepatitis,40.6,Died,severe
+Cow,"Persistent coughing, Weight loss",Bovine Tuberculosis,40.4,Euthanized,severe
+Sheep,"Scraping wool, Tremors",Scrapie,41.4,Euthanized,severe
+Cat,"Straining in litter box, Crying",Urinary Blockage,40.2,Ongoing,severe
+Dog,"Coughing up foam, Fainting",Congestive Heart Failure,39.9,Ongoing,severe
+Horse,Colic,Intestinal Torsion,41.5,Euthanized,severe
+Goat,None,Annual Vaccination,38.8,Recovered,no outbreak
+Pig,"Blisters on snout, Lameness",Vesicular Stomatitis,40.1,Recovered,moderate
+Dog,"Cloudy eyes, Vision loss",Cataracts,38.6,Ongoing,mild
+Cat,"Overgrooming, Hair loss",Psychogenic Alopecia,38.7,Ongoing,mild
+Cow,None,Pregnancy Check,38.5,Recovered,no outbreak
+Dog,"Skin rash, Itching",Atopic Dermatitis,39,Ongoing,mild
+Sheep,"Weakness, Pale membranes",Anemia,39.4,Ongoing,moderate
+Horse,"Fever, Lethargy, Neurologic signs",Eastern Equine Encephalitis,42.3,Died,severe
+Cat,Lethargy,Kidney Disease,39.1,Ongoing,moderate
+Pig,Coughing,Mycoplasmal Pneumonia,40,Ongoing,moderate
+Dog,None,Spay/Neuter Check-up,38.8,Recovered,no outbreak
+Goat,"Weight loss, Bottle jaw",Gastrointestinal Parasites,39.6,Ongoing,moderate
+Cow,"Weakness, Paralysis",Botulism,41.8,Died,severe
+Dog,"Reverse sneezing, Gagging",Tracheal Collapse,38.9,Ongoing,mild
+Cat,"Increased appetite, Weight loss",Hyperthyroidism,39.2,Ongoing,moderate
+Horse,None,Coggins Test,38.6,Recovered,no outbreak
+Sheep,"Sudden death, Convulsions",Enterotoxemia,42,Died,severe
+Dog,"Muscle wasting, Exercise intolerance",Degenerative Myelopathy,38.7,Ongoing,moderate
+Cat,None,Deworming,38.8,Recovered,no outbreak
+Pig,"Nasal distortion, Sneezing",Atrophic Rhinitis,39.8,Ongoing,moderate
+Cow,Lameness,Digital Dermatitis,39.5,Ongoing,mild
+Dog,"Itchy ears, Head shaking",Ear Mites,39,Recovered,mild
+Horse,"Depression, Fever, Colic",Anterior Enteritis,40.9,Ongoing,severe
+Goat,None,Health Check for Sale,38.9,Recovered,no outbreak
+Cat,"Vomiting, Dehydration",Pancreatitis,40.1,Ongoing,moderate
+Dog,"Difficulty swallowing, Regurgitation",Megaesophagus,39.3,Ongoing,severe
+Sheep,"Swollen jaw, Abscess",Caseous Lymphadenitis,39.9,Ongoing,moderate
+Cow,Diarrhea,Cryptosporidiosis,39.7,Recovered,mild
+Horse,Coughing,Heaves (RAO),39.4,Ongoing,moderate
+Dog,None,Nutritional Counseling,38.8,Recovered,no outbreak
+Cat,"Anorexia, Lethargy",Feline Panleukopenia,41.6,Died,severe
+Pig,"Diarrhea in piglets, Vomiting",Rotavirus Infection,39.6,Ongoing,moderate
+Goat,"Crusty sores on mouth, Teats",Orf Virus,39.5,Recovered,mild
+Dog,"Nosebleed, Lethargy",Rocky Mountain Spotted Fever,41,Ongoing,severe
+Cow,None,Hoof Care,38.6,Recovered,no outbreak
+Horse,"Skin lesions, Hair loss",Dermatophytosis (Ringworm),39.2,Recovered,mild
+Cat,Sneezing,Feline Calicivirus,39.8,Recovered,moderate
+Dog,"Circling, Head tilt",Vestibular Disease,39.1,Recovered,moderate
+Sheep,None,Shearing,38.7,Recovered,no outbreak
+Goat,Mastitis,Staphylococcal Infection,40.4,Ongoing,moderate
+Dog,"Red, watery eyes, Pawing at eye",Corneal Ulcer,38.9,Recovered,mild
+Cat,Gingivitis,Dental Resorption,38.8,Ongoing,moderate
+Horse,Lameness,Navicular Syndrome,39,Ongoing,moderate
+Cow,"Hair loss around eyes, Thick skin",Mange,39.3,Recovered,mild
+Dog,"Small skin bumps, Pus",Pyoderma,39.2,Recovered,mild
+Cat,None,Senior Wellness Check,38.7,Recovered,no outbreak
+Pig,Constipation,Dietary Indiscretion,39.4,Recovered,mild
+Sheep,"Bluish tongue, Swelling of face",Bluetongue,41.3,Died,severe
+Goat,None,Disbudding,39,Recovered,no outbreak
+Horse,"Swelling in lower legs, Oozing sores",Scratches (Pastern Dermatitis),39.1,Recovered,mild
+Dog,"Scooting, Licking anal area",Anal Gland Issues,38.8,Recovered,mild
+Cat,"Dilated pupils, High blood pressure",Hypertension,38.9,Ongoing,moderate
+Cow,Diarrhea,E. coli Infection,40,Recovered,moderate
+Pig,Sneezing,Inclusion Body Rhinitis,39.7,Recovered,mild
+Dog,None,Puppy Vaccination Series,38.9,Recovered,no outbreak
+Horse,"White spots in eyes, Tearing",Equine Recurrent Uveitis,39.6,Ongoing,moderate
+Goat,"Runny nose, Coughing",Viral Infection,39.9,Recovered,mild
+Sheep,None,Parasite Control,38.8,Recovered,no outbreak
+Cat,"Litter box avoidance, Straining",Interstitial Cystitis,38.7,Ongoing,mild
+Dog,"Collapse, Pale gums, Swollen abdomen",Splenic Hemangiosarcoma,39.5,Euthanized,severe
+Cow,None,Artificial Insemination,38.6,Recovered,no outbreak
+Horse,Lameness,Abscess in Hoof,39.8,Recovered,moderate
+Pig,Diarrhea,Swine Dysentery,40.6,Died,moderate
+Dog,"Dry eye, Squinting",Keratoconjunctivitis Sicca,39,Ongoing,moderate
+Cat,Vomiting,Chronic Kidney Disease,39.2,Ongoing,severe
+Goat,None,Castration,39.1,Recovered,no outbreak
+Sheep,"Stiff limbs, Tremors",Grass Tetany,41.2,Died,severe
+Dog,"Hot spots, Chewing skin",Acute Moist Dermatitis,39.3,Recovered,mild
+Horse,Colic,Sand Impaction,40.3,Ongoing,moderate
+Cow,None,Dehorning,39,Recovered,no outbreak
+Cat,"Bad breath, Drooling",Stomatitis,39.4,Ongoing,moderate
+Dog,"Sudden blindness, Dilated pupils",SARDS,38.9,Ongoing,moderate
+Pig,None,Iron Shot for Piglets,38.8,Recovered,no outbreak
+Horse,"Hives, Swelling",Allergic Reaction,39.5,Recovered,mild
+Dog,"Seizures, Disorientation",Epilepsy,39.1,Ongoing,moderate
+Cow,"Straining, Bloody urine",Urinary Calculi,40.8,Ongoing,severe
+Cat,"Aggression, Fear",Anxiety,38.8,Ongoing,mild
+Horse,"Fever, Lethargy",West Nile Virus,41.9,Died,severe
+Dog,"Dry, hacking cough",Kennel Cough,40,Recovered,moderate
+Pig,None,Weaning Check,38.9,Recovered,no outbreak
+Sheep,None,Hoof Trimming,38.7,Recovered,no outbreak
+Dog,"Lethargy, Pale gums",Anemia,39.3,Ongoing,moderate
+Cat,"Hiding, Decreased appetite",Pain (Undiagnosed),39.2,Ongoing,moderate
+Cow,"Bloated left side, Distress",Bloat,41.5,Euthanized,severe
+Dog,"Warts, Bumps on skin",Papillomas,38.9,Recovered,mild
+Horse,"Skin peeling, Redness",Photosensitization,39.6,Recovered,mild
+Goat,"Weakness, Paralysis",Polioencephalomalacia,41.4,Died,severe
+Dog,Diarrhea,Whipworms,39,Recovered,mild
+Cat,None,Kitten Wellness Check,38.8,Recovered,no outbreak
+Sheep,"Weight loss, Clumped wool",Johne's Disease,39.9,Euthanized,severe
+Dog,"Vomiting, Lethargy",Addison's Disease,39.7,Ongoing,severe
+Pig,Coughing,Swine Influenza,41,Ongoing,moderate
+Cow,"Displaced abomasum, Decreased appetite",DA,40.2,Ongoing,moderate
+Cat,None,Behavioral Counseling,38.6,Recovered,no outbreak
+Dog,Sneezing,Allergies,38.8,Ongoing,mild
+Horse,None,Pre-purchase Exam,38.5,Recovered,no outbreak
+Dog,"Limping, Reluctance to jump",Hip Dysplasia,39,Ongoing,moderate
+Cat,"Drooling, Difficulty eating",Oral Tumor,39.8,Euthanized,severe
+Cow,None,Calving Assistance,39.2,Recovered,no outbreak
+Pig,"Fever, Infertility",Leptospirosis,40.9,Ongoing,moderate
+Goat,None,Ultrasound,38.9,Recovered,no outbreak
+Dog,"Hair loss, rat tail""""",Alopecia X,38.7,Ongoing,mild
+Cat,"Weight loss, Vomiting",Inflammatory Bowel Disease,39.4,Ongoing,moderate
+Sheep,None,Drenching for Parasites,38.8,Recovered,no outbreak
+Dog,Vomiting,Garbage Gut,39.6,Recovered,mild
+Horse,Coughing,Allergic Bronchitis,39.7,Ongoing,mild
+Cow,None,Fly Control,38.7,Recovered,no outbreak
+Dog,"Stiffness, Difficulty rising",Osteoarthritis,38.9,Ongoing,moderate
+Cat,"Lethargy, Anorexia",Feline Infectious Peritonitis,41.3,Euthanized,severe
+Pig,"Skin discoloration, Fever",Glasser's Disease,41.4,Died,severe
+Dog,"Licking feet, Redness between toes",Pododermatitis,38.9,Recovered,mild
+Cat,"Squinting, Eye discharge",Corneal Sequestrum,39.1,Ongoing,moderate
+Horse,None,Saddle Fit Evaluation,38.6,Recovered,no outbreak
+Dog,"Drinking from toilet, Sweet breath",Diabetes Mellitus,39,Ongoing,severe
+Cow,"Retained placenta, Fever",Metritis,40.7,Ongoing,moderate
+Dog,"Head tilt, Loss of balance",Inner Ear Infection,39.9,Recovered,moderate
+Cat,"Asthma attack, Wheezing",Feline Asthma,39.5,Ongoing,moderate
+Sheep,None,Tail Docking,39,Recovered,no outbreak
+Pig,"Greasy skin, Brown flakes",Exudative Epidermitis,39.8,Recovered,mild
+Dog,"Bleeding gums, Bruising",Immune-Mediated Thrombocytopenia,40.5,Ongoing,severe
+Cat,"Twitching skin, Agitation",Feline Hyperesthesia Syndrome,38.8,Ongoing,mild
+Horse,Colic,Gas Colic,40.1,Recovered,moderate
+Dog,Vomiting,Motion Sickness,38.7,Recovered,mild
+Cow,None,Brucellosis Vaccination,38.9,Recovered,no outbreak
+Cat,Diarrhea,Tritrichomonas Foetus,39.3,Ongoing,moderate
+Dog,"Limping on hind leg, Pain",Cruciate Ligament Rupture,39.4,Ongoing,severe
+Pig,"Red spots on skin, Fever",Dermatosis Vegetans,40.3,Euthanized,severe
+Goat,None,Tattooing for Identification,38.8,Recovered,no outbreak
+Horse,"Swollen sheath, Pain",Bean Cleaning Needed,38.9,Recovered,mild
+Dog,"Ravenous appetite, Weight loss",Exocrine Pancreatic Insufficiency,38.8,Ongoing,moderate
+Cat,None,Adoption Exam,38.7,Recovered,no outbreak
+Cow,"Weak calves, Stillbirths",Neosporosis,39.6,Euthanized,severe
+Dog,Sneezing,Foxtail in Nose,39.2,Recovered,mild
+Sheep,"Swollen head, Difficulty breathing",Bighead,41.1,Died,severe
+Cat,Vomiting,Foreign Body Ingestion,40,Ongoing,severe
+Pig,"Jaundice, Fever",Leptospirosis,41.2,Died,moderate
+Dog,None,Heartworm Test,38.7,Recovered,no outbreak
+Horse,"Abnormal sweating, Long coat",Equine Cushing's Disease,39,Ongoing,moderate
+Cow,None,Nutritional Deficiency,39.3,Ongoing,mild
+Dog,"Red patch on skin, Itching",Ringworm,38.9,Recovered,mild
+Cat,"Panting, Rapid heart rate",Cardiomyopathy,39.7,Ongoing,severe
+Goat,Bloat,Grain Overload,40.6,Died,severe
+Dog,None,Microchip Scan,38.6,Recovered,no outbreak
+Sheep,"Paralysis, Weakness",Listeriosis,41.5,Euthanized,severe
+Horse,"Eye ulcer, Cloudiness",Moon Blindness,39.8,Ongoing,moderate
+Cat,Diarrhea,Food Intolerance,39.1,Ongoing,mild
+Cow,"Weakness, Recumbency after calving",Milk Fever,37.8,Ongoing,severe
+Dog,Vomiting,Ingested Toxin,40.4,Ongoing,severe
+Pig,"Shaking, Convulsions",Congenital Tremor,39.5,Recovered,mild
+Cat,None,Grooming,38.7,Recovered,no outbreak
+Dog,Lethargy,Anaplasmosis,40.7,Recovered,moderate
+Horse,Lameness,Thrush,38.8,Recovered,mild
+Cow,None,Fly Tag Application,38.6,Recovered,no outbreak
+Dog,"Eye redness, Squinting",Glaucoma,39.3,Ongoing,severe
+Cat,"Weight loss, Muscle wasting",Cachexia,38.5,Euthanized,severe
+Goat,"Nasal bots, Sneezing",Oestrus Ovis,39.4,Recovered,mild
+Pig,Coughing,Ascarid Infection,39.9,Recovered,mild
+Dog,"Fainting, Coughing",Pulmonary Hypertension,39.8,Ongoing,severe
+Horse,None,Chiropractic Adjustment,38.7,Recovered,no outbreak
+Cat,Vomiting,Intestinal Lymphoma,39.6,Euthanized,severe
+Dog,"Pawing at mouth, Drooling",Broken Tooth,39,Recovered,mild
+Cow,"Fluid under jaw, Weight loss",Hardware Disease,40.9,Euthanized,severe
+Sheep,"Circling, Head pressing",Polioencephalomalacia,41.6,Died,severe
+Cat,None,Blood Donation Screening,38.8,Recovered,no outbreak
+Dog,Lethargy,Blastomycosis,40.8,Ongoing,severe
+Horse,"Fever, Diarrhea, Laminitis",Colitis,41.1,Died,severe
+Goat,"Abscesses, Weight loss",Johne's Disease,39.7,Euthanized,severe
+Pig,"Round skin lesions, Non-itchy",Pityriasis Rosea,39.4,Recovered,mild
+Dog,None,Geriatric Wellness Exam,38.6,Recovered,no outbreak
+Cat,"Pacing, Yowling",Cognitive Dysfunction,38.7,Ongoing,moderate
+Cow,"Stiff gait, Swollen muscles",White Muscle Disease,39.2,Recovered,moderate
+Dog,Vomiting,Esophageal Stricture,39.5,Ongoing,moderate
+Sheep,None,Genetic Testing,38.8,Recovered,no outbreak
+Horse,Lameness,Sidebone,38.9,Ongoing,mild
+Cat,Diarrhea,Campylobacteriosis,39.9,Recovered,moderate
+Pig,"Skin hemorrhages, High fever",Erysipelothrix rhusiopathiae,41.9,Died,severe
+Dog,"Aggression, Snapping",Pain-induced Aggression,39.1,Ongoing,moderate
+Goat,None,Fecal Exam,38.8,Recovered,no outbreak
+Cow,"Infertility, Early embryonic death",Vibriosis,39.8,Euthanized,severe
+Dog,Vomiting,Hemorrhagic Gastroenteritis,40.6,Ongoing,severe
+Cat,"Choking, Gagging",Nasopharyngeal Polyp,39,Recovered,moderate
+Horse,"Nosebleed during exercise, Poor performance",EIPH,39.3,Ongoing,moderate
+Sheep,None,Ram Fertility Exam,38.9,Recovered,no outbreak
+Dog,Lethargy,IMHA (Immune-Mediated Hemolytic Anemia),41,Euthanized,severe
+Cat,Sneezing,Chronic Rhinitis,39.2,Ongoing,moderate
+Pig,None,Ringing for Rooting Prevention,39.1,Recovered,no outbreak
+Cow,None,Ketosis Testing,38.5,Recovered,no outbreak
+Dog,"Swollen face, Hives",Vaccine Reaction,39.7,Recovered,mild
+Horse,Lameness,Ringbone,39.1,Ongoing,moderate
+Goat,"Coughing, Weight loss",Tuberculosis,40.7,Euthanized,severe
+Cat,None,Dental Cleaning,38.6,Recovered,no outbreak
+Dog,"Skin thickening, elephant skin""""",Chronic Atopy,38.9,Ongoing,moderate
+Sheep,Abortion,Toxoplasmosis,40.2,Ongoing,severe
+Cow,None,Semen Collection,38.8,Recovered,no outbreak
+Horse,"Muscle atrophy, Weakness",Equine Protozoal Myeloencephalitis,40.4,Ongoing,severe
+Dog,Lethargy,Polyarthritis,40.1,Ongoing,moderate
+Cat,"Inappropriate urination, Crying",Urinary Crystals,39,Recovered,mild
+Pig,None,Castration,39.2,Recovered,no outbreak
+Goat,Mastitis,Mycoplasma Infection,40.8,Euthanized,severe
+Dog,Vomiting,Bilious Vomiting Syndrome,38.8,Recovered,mild
+Cow,"Warts on skin, Teats",Papillomatosis,39.1,Recovered,mild
+Horse,"Chronic diarrhea, Weight loss",Lawsonia Intracellularis,40.3,Ongoing,moderate
+Cat,None,Recheck Exam,38.7,Recovered,no outbreak
+Dog,"Cracked paw pads, Nose crust",Hyperkeratosis,38.6,Ongoing,mild
+Sheep,"Rapid breathing, Frothing at mouth",Pulmonary Adenomatosis,41.2,Euthanized,severe
+Goat,None,Copper Bolus Administration,38.9,Recovered,no outbreak
+Dog,"Sudden collapse, Weakness",Arrhythmia,39.4,Ongoing,severe
+Cat,"Constantly hungry, Thin",Tapeworms,38.9,Recovered,mild
+Horse,"Dull coat, Pot belly",Internal Parasites,39.3,Ongoing,mild
+Cow,None,Brand Inspection,38.7,Recovered,no outbreak
+Dog,"Lethargy, Coughing",Valley Fever,40.9,Ongoing,severe
+Cat,Sneezing,Bordetella,39.8,Recovered,moderate
+Pig,None,Vaccination for Erysipelas,39,Recovered,no outbreak
+Sheep,None,Pregnancy Ultrasound,38.9,Recovered,no outbreak
+Goat,Scabs on lips,Sore Mouth,39.6,Recovered,mild
+Horse,Lameness,SDFT Injury,39.2,Ongoing,severe
+Dog,"Growth on eyelid, Rubbing eye",Meibomian Gland Adenoma,38.8,Recovered,mild
+Cat,"Drooling, Pawing at face",Broken Jaw,40.3,Ongoing,severe
+Cow,None,BVD Testing,38.9,Recovered,no outbreak
+Pig,Anemia,Iron Deficiency,39.1,Ongoing,mild
+Dog,"Loss of pigment on nose, dudley nose""""",Vitiligo,38.7,Ongoing,mild
+Horse,Colic,Spasmodic Colic,39.9,Recovered,moderate
+Goat,None,Breeding Consultation,38.8,Recovered,no outbreak
+Sheep,Mastitis,Gangrenous Mastitis,41.5,Euthanized,severe
+Cat,"Twitching, Seizures",Toxoplasmosis,40.5,Ongoing,severe
+Dog,"Itching, Blackened skin",Malassezia Dermatitis,39.1,Recovered,moderate
+Cow,"Recumbent, Unable to rise",Downer Cow Syndrome,38.4,Euthanized,severe
+Horse,"Skin nodules, Ulcerating sores",Sarcoids,38.9,Ongoing,moderate
+Pig,None,Tail Docking,39,Recovered,no outbreak
+Dog,"Baldness, Symmetrical hair loss",Seasonal Alopecia,38.7,Ongoing,mild
+Cat,"Vomiting undigested food, Regurgitation",Pyloric Stenosis,39.4,Ongoing,moderate
+Goat,"Swollen testicles, Infertility",Brucellosis,40.6,Euthanized,severe
+Sheep,None,Foot Bath,38.8,Recovered,no outbreak
+Dog,"Cherry eye, Red mass in corner of eye",Prolapsed Nictitans Gland,38.9,Recovered,mild
+Horse,Coughing,Rhodococcus Equi Pneumonia,41,Died,severe
+Cow,Lameness,Sole Ulcer,39.8,Ongoing,moderate
+Cat,"Drooling, Anorexia",Oral Squamous Cell Carcinoma,39.6,Euthanized,severe
+Dog,None,Anal Gland Expression,38.7,Recovered,no outbreak
+Pig,Diarrhea,Coccidiosis,39.7,Recovered,mild
+Horse,"Swollen legs, Fever",Cellulitis,40.2,Ongoing,moderate
+Dog,"Difficulty walking, Knuckling over",Fibrocartilaginous Embolism,39,Ongoing,severe
+Cow,"Sudden high fever, Depression",Anaplasmosis,41.4,Died,severe
+Cat,"Lump on body, Non-painful",Lipoma,38.8,Ongoing,mild
+Horse,"Skin scraping, Itching",Mange,39.4,Recovered,mild
+Dog,Vomiting,Ingested sock,39.5,Ongoing,moderate
+Pig,"Fever, Lethargy, Diamond skin lesions",Swine Erysipelas,41.8,Died,severe
+Sheep,"Watery diarrhea, Dehydration",Salmonellosis,40.9,Died,moderate
+Dog,None,Fecal Test,38.7,Recovered,no outbreak
+Cat,"Hissing when touched, Hiding",Abscess from fight,40.1,Recovered,moderate
+Cow,None,Magnet Administration,38.8,Recovered,no outbreak
+Dog,"Sneezing blood, Facial swelling",Nasal Aspergillosis,40.3,Ongoing,severe
+Horse,Lameness,Quarter Crack,39,Ongoing,mild
+Goat,"Weight loss, Clumped feces",Tapeworms,39.3,Recovered,mild
+Dog,"Bad breath, Plaque buildup",Periodontal Disease,38.9,Ongoing,moderate
+Cat,"Pacing, Crying at night",Senility,38.6,Ongoing,mild
+Sheep,"Abortion storm, Weak lambs",Campylobacteriosis,40.5,Euthanized,severe
+Dog,None,Pre-surgical Bloodwork,38.8,Recovered,no outbreak
+Pig,None,Boar Semen Evaluation,38.7,Recovered,no outbreak
+Cow,"Corneal opacity, Tearing",Pinkeye,39.7,Recovered,mild
+Cat,"Bald belly, Overgrooming",Flea Allergy Dermatitis,39,Recovered,moderate
+Dog,"Sudden paralysis, Pain",Intervertebral Disc Disease,39.6,Ongoing,severe
+Horse,"Fever, Lethargy, Edema",Equine Viral Arteritis,40.8,Euthanized,severe
+Dog,"Licking granuloma, Raw sore on leg",Acral Lick Dermatitis,38.9,Ongoing,mild
+Cat,"Straining to urinate, Blood",UTI,39.4,Recovered,mild
+Cow,Bloat,Frothy Bloat,41.2,Died,severe
+Pig,"Stillbirths, Mummified fetuses",Porcine Parvovirus,40.1,Ongoing,moderate
+Goat,None,Hoof Trimming,38.7,Recovered,no outbreak
+Dog,"Straining to defecate, Ribbon-like stool",Perineal Hernia,39.1,Ongoing,moderate
+Cat,"Drooling, Refusing hard food",Tooth Resorption,39,Ongoing,moderate
+Sheep,Coughing,Lungworm Infection,39.9,Recovered,moderate
+Dog,"Swollen puppy belly, pot belly""""",Roundworms,39.2,Recovered,mild
+Horse,None,Lameness Exam,39.1,Recovered,no outbreak
+Cow,Lameness,Hairy Heel Warts,39.4,Ongoing,mild
+Dog,"Itching, Recurrent skin infections",Food Allergies,39,Ongoing,moderate
+Cat,"Lump under chin, Swollen",Acne,38.8,Recovered,mild
+Pig,"Sunburn, Reddened skin",Photosensitization,39.5,Recovered,mild
+Dog,"Weakness, Difficulty barking",Laryngeal Paralysis,39.3,Ongoing,severe
+Cat,None,Blood Pressure Check,38.9,Recovered,no outbreak
+Horse,"Headshaking, Snorting",Trigeminal Neuralgia,39.2,Ongoing,moderate
+Dog,"Nailbed infection, Swelling",Paronychia,39.1,Recovered,mild
+Cow,None,Tuberculosis Test,38.8,Recovered,no outbreak
+Dog,"Whining, Shaking",Anxiety from Storms,38.9,Ongoing,mild
+Cat,"Greasy coat, Dandruff",Seborrhea,38.7,Recovered,mild
+Sheep,"Circling, Disorientation",Listeriosis,41.7,Died,severe
+Pig,"Sores on feet, Lameness",Vesicular Exanthema,40.4,Euthanized,severe
+Dog,"Growling over food, Guarding",Resource Guarding,38.8,Ongoing,mild
+Cat,None,Echocardiogram,39,Recovered,no outbreak
+Horse,"Wasting, Chronic weight loss",Equine Metabolic Syndrome,38.9,Ongoing,moderate
+Dog,"Trouble closing mouth, Dropped jaw",Trigeminal Neuritis,39,Recovered,moderate
+Cow,"Wooden tongue, Inability to eat",Actinobacillosis,40.6,Ongoing,moderate
+Cat,Vomiting,Megacolon,39.2,Ongoing,moderate
+Dog,"Muscle spasms, Rigid limbs",Tetanus,41.4,Died,severe
+Pig,None,Ear Notching,38.9,Recovered,no outbreak
+Goat,"Nasal discharge, Head pressing",Nasal Tumor,40,Euthanized,severe
+Horse,"Fever, Diarrhea",Potomac Horse Fever,41.1,Died,severe
+Dog,None,Travel Health Certificate,38.7,Recovered,no outbreak
+Cat,"Panting, Blue-tinged gums",Pleural Effusion,40.2,Euthanized,severe
+Cow,"Lumpy jaw, Hard swelling on bone",Actinomycosis,40.1,Ongoing,moderate
+Dog,Itching,Contact Dermatitis,38.9,Recovered,mild
+Sheep,None,Selenium Injection,38.8,Recovered,no outbreak
+Cat,"Runny nose, Congestion",Chronic Sinusitis,39.3,Ongoing,mild
+Pig,"Bloody diarrhea, Weight loss",Ileitis,40.5,Ongoing,moderate
+Dog,"Difficulty breathing, Exercise intolerance",Brachycephalic Obstructive Airway Syndrome,39.4,Ongoing,severe
+Horse,"Runny eyes, Nasal discharge",Viral Rhinopneumonitis,40,Recovered,moderate
+Cow,"Incoordination, Falling",Nervous Ketosis,39.9,Ongoing,severe
+Dog,None,Obedience Training Referral,38.8,Recovered,no outbreak
+Cat,"Peeing on rugs, Hiding",Stress-related Cystitis,38.9,Ongoing,mild
+Goat,None,Vitamin A & D Shot,38.8,Recovered,no outbreak
+Dog,"Waxy discharge in ears, Odor",Yeast Otitis,39.2,Recovered,mild
+Sheep,"Rapid breathing, Fever",Pasteurellosis,41.3,Died,severe
+Horse,Lameness,Pedal Osteitis,39.1,Ongoing,moderate
+Cat,"Vomiting bile, Early morning",Bilious Vomiting,38.7,Recovered,mild
+Cow,"Hair loss, Itching",Lice Infestation,39,Recovered,mild
+Dog,None,Weight Management Plan,38.8,Recovered,no outbreak
+Pig,"Fever, Abortion",Brucellosis,40.7,Euthanized,severe
+Cat,"Sitting by water bowl, Not drinking",Nausea,39.1,Ongoing,mild
+Dog,"Mass on gums, Bleeding",Epulis,38.9,Ongoing,mild
+Horse,None,Insurance Exam,38.6,Recovered,no outbreak
+Cow,"Low milk calcium, Weakness",Subclinical Milk Fever,38.4,Recovered,mild
+Dog,Seizure,Brain Tumor,40.2,Euthanized,severe
+Cat,None,Re-check Suture Site,38.8,Recovered,no outbreak
+Goat,"Diarrhea, Dehydration",E. coli Scours,40,Died,moderate
+Pig,"Ulcers in stomach, Pale",Gastric Ulcers,39.6,Ongoing,moderate
+Dog,"Tail chasing, Obsessive behavior",OCD,38.8,Ongoing,mild
+Horse,Lameness,Bog Spavin,39,Ongoing,mild
+Cat,None,Euthanasia (Old Age),38.2,Euthanized,no outbreak
+Dog,"Panting, Restlessness",Heat Stress,40.5,Recovered,mild
+Cow,None,Castration,39.1,Recovered,no outbreak
+Sheep,"Weak lambs, Low survival",White Muscle Disease,39.3,Ongoing,moderate
+Cat,"Stumbling, Falling",Cerebellar Hypoplasia,38.9,Ongoing,moderate
+Dog,"Separation anxiety, Barking",Behavioral Issue,38.8,Ongoing,mild
+Horse,"Weight loss, Colic",Sand Ingestion,39.9,Ongoing,moderate
+Goat,None,Tetanus Antitoxin,38.9,Recovered,no outbreak
+Pig,"Constipation in sows, Straining",Fecal Impaction,39.3,Recovered,mild
+Dog,"Snoring, Snorting",Elongated Soft Palate,39,Ongoing,moderate
+Cat,"Hiding, Not eating",Post-operative Pain,39.2,Recovered,mild
+Cow,None,Trichomoniasis Test,38.8,Recovered,no outbreak
+Dog,"Skin folds moist, Red",Skin Fold Dermatitis,39.1,Recovered,mild
+Sheep,"Sudden death, Bloat",Clostridial Disease,42.2,Died,severe
+Horse,"Muscle tremors, Weakness",Hyperkalemic Periodic Paralysis,39.4,Ongoing,moderate
+Cat,None,FIV/FeLV Test,38.8,Recovered,no outbreak
+Pig,"Weak piglets, Splayleg",Myofibrillar Hypoplasia,39,Recovered,mild
+Dog,"Licking air, Swallowing",Esophagitis,39.2,Recovered,mild
+Goat,"Thick, cheesy milk",Mastitis,40.3,Ongoing,moderate
+Cow,"Photosensitivity, Liver damage",Pyrrolizidine Alkaloid Toxicity,41,Euthanized,severe
+Dog,"Pooping in house, Disoriented",Canine Cognitive Dysfunction,38.7,Ongoing,moderate
+Cat,"Eye inflammation, Pain",Uveitis,39.6,Ongoing,moderate
+Horse,"Chronic cough, Nasal discharge",Guttural Pouch Mycosis,40.5,Euthanized,severe
+Sheep,"Wool pulling, Chewing",Wool Break,38.9,Ongoing,mild
+Dog,"Whining in crate, Destructive",Crate Anxiety,38.8,Ongoing,mild
+Cat,"Lethargy, Refusing to move",Fever of Unknown Origin,40.8,Ongoing,moderate
+Pig,None,Needle Teeth Clipping,38.9,Recovered,no outbreak
+Cow,Lameness,Foot Abscess,39.9,Recovered,mild
+Dog,"Swallowing repeatedly, Lip smacking",Nausea,39,Recovered,mild
+Horse,Lameness,Suspensory Ligament Desmitis,39.3,Ongoing,severe
+Goat,"Hair loss, Flaky skin",Zinc Deficiency,38.9,Recovered,mild
+Cat,"Excessive vocalization, Restlessness",Hyperesthesia,38.8,Ongoing,mild
+Dog,"Growling, Fear of strangers",Fear Aggression,38.9,Ongoing,moderate
+Sheep,"Limping, Swollen knee",Infectious Arthritis,40.4,Ongoing,moderate
+Cow,None,Synchronized Breeding Program,38.8,Recovered,no outbreak
+Horse,"Depression, Lack of interest",Anhedonia,38.7,Ongoing,mild
+Dog,"Eating non-food items, Rocks",Pica,38.9,Ongoing,mild
+Cat,"Staring into space, Unresponsive",Focal Seizure,39.2,Ongoing,moderate
+Pig,"Sow crushing piglets, Agitation",Maternal Cannibalism,39.5,Ongoing,severe
+Goat,None,Selenium Supplementation,38.8,Recovered,no outbreak
+Dog,None,Canine Good Citizen Test,38.7,Recovered,no outbreak
+Cow,"Decreased rumen motility, Anorexia",Indigestion,39.4,Recovered,mild
+Horse,"Head tilt, Incoordination",Vestibular Syndrome,39.8,Recovered,moderate
+Cat,"Diarrhea, Weight loss",Exocrine Pancreatic Insufficiency,39.1,Ongoing,moderate
+Dog,"Coprophagia, Eating feces",Behavioral Problem,38.8,Ongoing,mild
+Sheep,"Facial paralysis, Drooping ear",Listeriosis,41.4,Died,severe
+Goat,Kidding,Dystocia,39.9,Ongoing,severe
+Dog,"Submissive urination, Cowering",Anxiety,38.7,Ongoing,mild
+Cat,"Panting, Agitation",Pain,39.5,Ongoing,moderate
